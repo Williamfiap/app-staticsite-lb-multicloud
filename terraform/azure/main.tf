@@ -95,6 +95,8 @@ resource "azurerm_network_interface" "vm03" {
     }
 }
 
+# 123
+
 resource "azurerm_network_interface" "vm04" {
     name                = "vm04"
     location            = azurerm_resource_group.rg.location
