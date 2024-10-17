@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "rg" {
-    name     = "rg-staticsite-lb-multicloud-tf-williamiac"
+    name     = "rg-staticsite-lb-multicloud-tf-williamiaciac"
     location = "brazilsouth"
 }
 
@@ -267,7 +267,7 @@ resource "azurerm_public_ip" "lb" {
     location            = azurerm_resource_group.rg.location
     resource_group_name = azurerm_resource_group.rg.name
     allocation_method   = "Static"
-    domain_name_label   = "staticsitelbtfwilliamiac123"
+    domain_name_label   = "staticsitelbtfwilliamiac"
 }
 
 resource "azurerm_lb" "lb" {
