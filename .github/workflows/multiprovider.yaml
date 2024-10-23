@@ -46,10 +46,10 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-session-token    : ${{ secrets.AWS_SESSION_TOKEN }}
         aws-region           : us-east-1
-    - run: terraform -chdir=./terraform/aws/modules init
-    - run: terraform -chdir=./terraform/aws/modules plan -out tfplan
-    - run: terraform -chdir=./terraform/aws/modules apply tfplan
-    - run: terraform -chdir=./terraform/aws/modules show
+    - run: terraform -chdir=./terraform/aws/ init
+    - run: terraform -chdir=./terraform/aws/ plan -out tfplan
+    - run: terraform -chdir=./terraform/aws/ apply tfplan
+    - run: terraform -chdir=./terraform/aws/ show
   cd-azure:
     name: Deploy on Azure
     needs: ci-test
