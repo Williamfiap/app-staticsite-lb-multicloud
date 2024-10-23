@@ -110,7 +110,7 @@ resource "aws_instance" "instance04" {
 resource "aws_elb" "elb" {
     name            = "staticsitelbmulticloudtfwilliam"
     security_groups = [aws_security_group.sglb.id]
-    subnets         = [aws_subnet.subnet1a.id, aws_subnet.subnet1c.id]
+    subnets         = [var.subnet1a_id_input, var.subnet1c_id_input]
     listener {
         instance_port     = 80
         instance_protocol = "http"
