@@ -48,8 +48,8 @@ jobs:
         aws-region           : us-east-1
     - run: terraform -chdir=./terraform/aws init
     - run: terraform -chdir=./terraform/aws plan -out tfplan
-    - run: terraform -chdir=./terraform/aws apply -destroy tfplan
-    - run: terraform -chdir=./terraform/aws show
+    #- run: terraform -chdir=./terraform/aws apply -destroy tfplan
+    #- run: terraform -chdir=./terraform/aws show
   cd-azure:
     name: Deploy on Azure
     needs: ci-test
